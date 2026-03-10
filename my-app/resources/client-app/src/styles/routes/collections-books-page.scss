@@ -1,0 +1,26 @@
+@use "../../styles/functions" as fn;
+
+
+@media screen and (min-height: calc(100vw + 100px)) {
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+}
+
+.main-books {
+    background-color: #ffffff;
+    padding-top: fn.get-vw(15px, 1920);
+    padding-bottom: fn.get-vw(15px, 1920);
+    padding-left: fn.get-vw(40px, 1920);
+
+    .books-lists {
+        width: fn.get-vw(1420px, 1920);
+
+        a.book-link {
+            color: #176093;
+            //color: #000000;
+            text-decoration: none;
+            background: transparent;
+        }
+    }
+}

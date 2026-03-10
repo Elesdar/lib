@@ -1,0 +1,69 @@
+@use "../../styles/functions" as fn;
+
+
+@media screen and (min-height: calc(100vw + 100px)) {
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+}
+
+.main-collections {
+    background-color: #ffffff;
+
+    .collections {
+        width: fn.get-vw(1420px, 1920);
+        padding-top: fn.get-vw(25px, 1920);
+        padding-right: fn.get-vw(25px, 1920);
+        padding-left: fn.get-vw(25px, 1920);
+        padding-bottom: fn.get-vw(25px, 1920);;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: fn.get-vw(50px, 1920);
+
+        img {
+            object-fit: contain;
+        }
+
+        .add-collection, .collection {
+            width: fn.get-vw(300px, 1920);
+            height: fn.get-vw(300px, 1920);
+            align-items: center;
+
+            a.add-collection, a.collection {
+                text-decoration: none;
+                width: fn.get-vw(300px, 1920);
+                height: fn.get-vw(300px, 1920);
+
+                .add-collection-title, .collection-title {
+                    text-decoration: none;
+                    padding-bottom: fn.get-vw(25px, 1920);
+                    padding-top: fn.get-vw(25px, 1920);
+                    text-align: center;
+                    font-size: fn.get-vw(20px, 1920);
+                    color: #000000;
+                    font-family: inherit;
+                    text-decoration: inherit;
+                }
+
+                .add-collection-image, .collection-image {
+                    padding-right: fn.get-vw(25px, 1920);
+                    padding-left: fn.get-vw(25px, 1920);
+
+                    .img-add-collection {
+                        padding: fn.get-vw(25px, 1920);
+                        width: fn.get-vw(200px, 1920);
+                        height: fn.get-vw(200px, 1920);
+                    }
+
+                    .img-collection {
+                        width: fn.get-vw(250px, 1920);
+                        height: fn.get-vw(250px, 1920);
+                    }
+                }
+            }
+        }
+    }
+}

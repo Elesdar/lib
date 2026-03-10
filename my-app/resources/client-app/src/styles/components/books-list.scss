@@ -1,0 +1,74 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+.table-list-lines {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: fn.get-vw(40px, 1920);
+
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+
+        tr, td {
+            vertical-align: top;
+        }
+    }
+
+    tr.border {
+        border-top: 1px solid #DDDDDD;
+        text-align: left;
+
+        th {
+            padding-bottom: fn.get-vw(5px, 1920);
+        }
+    }
+
+    tr {
+        display: table-row;
+        border: 0 none;
+        vertical-align: baseline;
+        outline: 0 none;
+        line-height: 1.65;
+        //margin-bottom: fn.get-vw(5px, 1920);
+
+        .index {
+            color: #9da2a8;
+            padding-right: fn.get-vw(5px, 1920);
+            width: fn.get-vw(30px, 1920);
+            text-align: center;
+        }
+
+        th {
+            display: table-cell;
+            font-weight: bold;
+            vertical-align: inherit;
+            text-align: left;
+            line-height: 1.65;
+        }
+
+        .num {
+            text-align: center;
+            width: fn.get-vw(120px, 1920);
+            position: relative;
+        }
+    }
+
+    .order-control {
+        color: #333333;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+}
+
+.header-list-books {
+    .subheadline {
+        width: 75%;
+    }
+    
+}

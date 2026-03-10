@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:17.4
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+  php:
+    build:
+      context: ./php
+    user: 1000:1000
+    volumes:
+      - ./my-app/:/var/www/my-app
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./my-app/:/var/www/my-app
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/logs:/var/log/nginx/
+    depends_on:
+      - php
+      - postgres
+volumes:
+  pg_data:

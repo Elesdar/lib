@@ -1,0 +1,134 @@
+@use "../../styles/functions" as fn;
+
+
+@media screen and (min-height: calc(100vw + 100px)) {
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+}
+
+.main-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.form {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    padding-top: fn.get-vw(30px, 1920);
+    padding-bottom: fn.get-vw(30px, 1920);
+    padding-right: fn.get-vw(76px, 1920);
+    padding-left: fn.get-vw(76px, 1920);
+
+    .form-title {
+        font-size: fn.get-vw(20px, 1920);
+        margin: fn.get-vw(5px, 1920);
+        padding-bottom: fn.get-vw(15px, 1920);
+    }
+
+    .field {
+        input, select {
+            font-size: fn.get-vw(16px, 1920);
+            width: fn.get-vw(280px, 1920);
+            height: fn.get-vw(42px, 1920);
+            padding: fn.get-vw(4px, 1920);
+            border: fn.get-vw(1px, 1920) solid #ccc;
+            border-radius: fn.get-vw(4px, 1920);
+            box-sizing: border-box;
+            margin: fn.get-vw(5px, 1920);
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        textarea {
+            font-size: fn.get-vw(16px, 1920);
+            width: fn.get-vw(280px, 1920);
+            resize: none;
+            padding: fn.get-vw(4px, 1920);
+            border: fn.get-vw(1px, 1920) solid #ccc;
+            border-radius: fn.get-vw(4px, 1920);
+            box-sizing: border-box;
+            margin: fn.get-vw(5px, 1920);
+        }
+
+        .input-file {
+            display: flex;
+            align-items: center;
+            gap:  fn.get-vw(10px, 1920);
+            width: fn.get-vw(280px, 1920);
+            margin: fn.get-vw(5px, 1920);
+
+            .file-input-hidden {
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .upload-label {
+                width: fn.get-vw(70px, 1920);
+                height: fn.get-vw(34px, 1920);
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                padding: fn.get-vw(8px, 1920);
+                cursor: pointer;
+                border-radius:  fn.get-vw(4px, 1920);
+                background-color: #86888a;
+                color: #fff;
+                font-size: fn.get-vw(16px, 1920);
+            }
+
+            .file-name-text {
+                width: fn.get-vw(190px, 1920);
+                color: #333;
+                vertical-align: middle;
+                word-break: break-all;
+            }
+        }
+    }
+
+    .submit {
+        margin: fn.get-vw(15px, 1920) fn.get-vw(5px, 1920);
+
+        button {
+            font-size: fn.get-vw(16px, 1920);
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: fn.get-vw(14px, 1920) fn.get-vw(20px, 1920);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+
+    .error {
+        width: fn.get-vw(280px, 1920);
+        margin: fn.get-vw(5px, 1920);
+        color: #ff4433;
+        word-break: break-word;
+    }
+
+    .hint {
+        width: fn.get-vw(280px, 1920);
+        margin: fn.get-vw(5px, 1920);
+        font-size: fn.get-vw(16px, 1920);
+        color: #86888a;
+        word-break: break-word;
+    }
+}

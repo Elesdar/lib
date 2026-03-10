@@ -1,0 +1,72 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+.header {
+    padding-top: fn.get-vw(5px, 1920);
+    padding-bottom: fn.get-vw(15px, 1920);
+    margin-bottom: fn.get-vw(30px, 1920);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: fn.get-vw(20px, 1920);
+    gap: fn.get-vw(74px, 1920);
+    position: sticky;
+
+    .logo {
+        width: fn.get-vw(70px, 1920);
+        height: fn.get-vw(70px, 1920);
+        margin-left: fn.get-vw(15px, 1920);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: right;
+        margin-right: fn.get-vw(15px, 1920);
+        gap: fn.get-vw(20px, 1920);
+
+        a.icon-link {
+            text-decoration: none;
+            width: fn.get-vw(80px, 1920);;
+            height: fn.get-vw(80px, 1920);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            span {
+                margin-top: fn.get-vw(10px, 1920);
+            }
+
+            .icon {
+                img {
+                    width: fn.get-vw(40px, 1920);
+                }
+            }
+
+            .icon-button-text {
+                font-size: fn.get-vw(16px, 1920);
+                text-decoration: none;
+                color: #000000;
+                font-family: inherit;
+                padding-top: fn.get-vw(2px, 1920);;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline; /* Добавляем подчеркивание */
+        }
+    }
+}
+

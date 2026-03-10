@@ -1,0 +1,190 @@
+@use "../../styles/functions" as fn;
+
+
+@media screen and (min-height: calc(100vw + 100px)) {
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+}
+
+.main-home {
+    background-color: #ffffff;
+
+    .hero {
+        width: fn.get-vw(1420px, 1920);
+        height: fn.get-vw(230px, 1920);
+        padding-top: fn.get-vw(50px, 1920);
+        padding-right: fn.get-vw(50px, 1920);
+        padding-left: fn.get-vw(50px, 1920);
+        display: flex;
+        gap: fn.get-vw(50px, 1920);
+
+        .add-book, .notes, .book-calendar {
+            background-color: #fff5dc80;
+            width: fn.get-vw(300px, 1920);
+            height: fn.get-vw(200px, 1920);
+            align-items: center;
+
+            a.add-book, a.to-notes, a.book-calendar {
+                text-decoration: none;
+                width: fn.get-vw(300px, 1920);
+                height: fn.get-vw(200px, 1920);
+
+                .add-book-title, .notes-title, .book-calendar-title {
+                    padding-bottom: fn.get-vw(25px, 1920);
+                    padding-top: fn.get-vw(25px, 1920);
+                    text-align: center;
+                    font-size: fn.get-vw(20px, 1920);
+                    color: #000000;
+                    font-family: inherit;
+                    text-decoration: inherit;
+                }
+
+                .add-book-image, .notes-image, .book-calendar-image {
+                    padding-right: fn.get-vw(100px, 1920);
+                    padding-left: fn.get-vw(100px, 1920);
+                    padding-bottom: fn.get-vw(25px, 1920);
+
+                    img {
+                        width: fn.get-vw(100px, 1920);
+                        height: fn.get-vw(100px, 1920);
+                    }
+                }
+            }
+        }
+
+        .strike {
+            height: fn.get-vw(200px, 1920);
+            padding-right: fn.get-vw(15px, 1920);
+            padding-left: fn.get-vw(15px, 1920);
+            padding-top: fn.get-vw(5px, 1920);
+            background-color: #fff5dc80;
+            width: fn.get-vw(320px, 1920);
+            display: flex;
+            flex-direction: column;
+            gap: fn.get-vw(3px, 1920);
+
+            .strike-info {
+                display: flex;
+                height: fn.get-vw(50px, 1920);
+                flex-direction: row;
+                align-items: center;
+                gap: fn.get-vw(15px, 1920);
+
+                .image-strike {
+                    img {
+                        width: fn.get-vw(40px, 1920);
+                        height: fn.get-vw(40px, 1920);
+                    }
+                }
+
+                .text-strike {
+                    font-size: fn.get-vw(18px, 1920);
+                }
+            }
+
+            .week {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: fn.get-vw(15px, 1920);
+
+                .week-text {
+                    font-size: fn.get-vw(18px, 1920);
+                    text-align: left;
+                }
+
+                .days {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: fn.get-vw(15px, 1920);
+
+                    .day {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: fn.get-vw(2px, 1920);
+
+                        .circle {
+                            border: fn.get-vw(2px, 1920) solid #5f6f52;
+                            width: fn.get-vw(27px, 1920);
+                            height: fn.get-vw(27px, 1920);
+                            background-color: #ffffff;
+                            border-radius: 50%;
+                        }
+
+                        .day-name {
+                            font-size: fn.get-vw(14px, 1920);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lists-books {
+        width: fn.get-vw(1420px, 1920);
+        padding-bottom: fn.get-vw(50px, 1920);
+        padding-left: fn.get-vw(50px, 1920);
+        padding-right: fn.get-vw(50px, 1920);
+
+        .list {
+            margin-top: fn.get-vw(50px, 1920);
+
+            .title-block {
+                font-size: fn.get-vw(22px, 1920);
+                text-decoration: none;
+                color: #000000;
+            }
+
+            .lists-books-stripe {
+                background-color: #A9A9A9 ;
+                margin-top: fn.get-vw(21px, 1920);
+                width: fn.get-vw(1420px, 1920);
+                height: fn.get-vw(3px, 1920);
+            }
+
+            .books {
+                margin-top: fn.get-vw(36px, 1920);;
+                display: flex;
+                flex-direction: row;
+                gap: fn.get-vw(77px, 1920);
+                flex-wrap: wrap;
+
+                a.book {
+                    width: fn.get-vw(172px, 1920);
+                    background-color: transparent;
+                    text-decoration: none;
+
+                    .book-image {
+                        img {
+                            width: fn.get-vw(172px, 1920);
+                            height: fn.get-vw(253px, 1920);
+                        }
+                    }
+
+                    .book-title {
+                        margin-top: fn.get-vw(11px, 1920);
+                        font-size: fn.get-vw(18px, 1920);
+                        color: #000000;
+                        font-family: inherit;
+                        text-decoration: none;
+                    }
+
+                    .book-last-date {
+                        margin-top: fn.get-vw(11px, 1920);
+                        font-size: fn.get-vw(16px, 1920);
+                        color: #00000080;
+                        font-family: inherit;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+

@@ -1,0 +1,8 @@
+export default function FindIcon() {
+    return (
+        <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5938 23.4375C19.0303 23.4375 23.4375 19.0303 23.4375 13.5938C23.4375 8.1572 19.0303 3.75 13.5938 3.75C8.1572 3.75 3.75 8.1572 3.75 13.5938C3.75 19.0303 8.1572 23.4375 13.5938 23.4375Z" stroke="#B6C2CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M20.554 20.5547L26.2493 26.2501" stroke="#B6C2CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+}

@@ -1,0 +1,46 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+.footer {
+    padding: fn.get-vw(50px, 1920);;
+    display: flex;
+    gap: fn.get-vw(250px, 1920);
+    flex-direction: row;
+
+    .navigation, .info, .contacts{
+        display: flex;
+        gap: fn.get-vw(15px, 1920);
+        flex-direction: column;
+
+        .footer-navigation-title, .footer-info-title, .footer-contacts-title{
+            font-size: fn.get-vw(18px, 1920);
+            font-weight: bold;
+        }
+
+        a.footer-navigation-link, a.footer-info-link{
+            text-decoration: none;
+            font-size: fn.get-vw(18px, 1920);
+            color: #000000;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: fn.get-vw(15px, 1920);
+        flex-direction: row;
+
+        .footer-social-link {
+            img {
+                width: fn.get-vw(40px, 1920);
+                height: fn.get-vw(40px, 1920);
+            }
+        }
+    }
+}

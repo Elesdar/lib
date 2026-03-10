@@ -1,0 +1,26 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+.search-block {
+    line-height: fn.get-vw(1.65px, 1920);
+    margin-bottom: fn.get-vw(30px, 1920);
+
+    .field input {
+        width: 100%;
+        line-height: fn.get-vw(34px, 1920);
+        border: fn.get-vw(3px, 1920) solid #d8dde4;
+        box-sizing: border-box;
+    }
+
+    .field input:focus {
+        border: fn.get-vw(2px, 1920) solid #176093;
+        outline: none;
+    }
+}

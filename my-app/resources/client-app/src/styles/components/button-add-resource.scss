@@ -1,0 +1,48 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+a.button-add-resource {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 160px;
+    height: 50px;
+    border: 2px solid #31516D;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #31516D;
+    box-shadow: 0px 0px 2px 0px #333333;
+
+    .mb-text {
+        color: #ffffff;
+        font-size: 15px;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1em;
+        box-sizing: border-box;
+        display: block;
+        background-color: unset;
+        position: relative;
+        padding: 18px 0px 0px 0px;
+        text-shadow: 0px 0px 0px #31516D;
+    }
+}
+
+a.button-add-resource:hover {
+    border-color: #31516D;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px #333333;
+
+    .mb-text {
+        color: #31516D;
+        text-shadow: 0px 0px 0px #333333;
+    }
+}

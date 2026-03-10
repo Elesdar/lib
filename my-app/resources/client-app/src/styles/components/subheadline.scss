@@ -1,0 +1,20 @@
+@use "../../styles/functions" as fn;
+
+@media screen and (min-height: calc(100vw + 100px)) {
+
+}
+
+@media screen and (max-height: calc(100vw + 100px - 1px)) {
+
+}
+
+.subheadline {
+    background-color: #e8ebef;
+    font-size: fn.get-vw(18px, 1920);
+    font-weight: bold;
+    line-height: fn.get-vw(40px, 1920);
+    padding: fn.get-vw(0px, 1920) fn.get-vw(10px, 1920);
+    margin-bottom: fn.get-vw(10px, 1920);
+    border-left: fn.get-vw(10px, 1920) solid #d8dde4;
+    text-transform: uppercase;
+}
